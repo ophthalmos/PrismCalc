@@ -240,7 +240,7 @@ namespace PrismCalc
             tbOblHrzBas.Text = rhpBas.ToString("0");
             tbOblVrtBas.Text = rvpBas.ToString("0"); // tbOblVrtBas.Text = rvpBas.Equals(90) ? "90 (oben)" : "270 (unten)";
             int wid = pictureBox2.ClientSize.Width, hgt = pictureBox2.ClientSize.Height;
-            Bitmap bm = new Bitmap(wid, hgt); // pictureBox2.Image = null; 
+            Bitmap bm = new Bitmap(wid, hgt); // der Trick ist, dass erst ein Bitmap erstellt wird, welches erst nach Ferigstellung angezeigt wird. 
             using (Graphics g = Graphics.FromImage(bm)) // Compiler baut Dispose ein
             {
                 g.SmoothingMode = SmoothingMode.HighQuality;
