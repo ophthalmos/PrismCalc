@@ -6,6 +6,6 @@ By contrast, it makes sense to prescribe prisms with oblique axis, because a low
 
 The program calculates the strength of the resulting prism with oblique base axis. Also recalculations and different distributions between the two eyes are possible. All user inputs and calculations are visualized.
 
-![Screenshot](Screenshot.gif)
+![Screenshot](Screenshot.png)
 
 Download: [https://www.netradio.info/medical/](https://www.netradio.info/medical/)
