@@ -25,7 +25,7 @@ namespace PrismCalc
 
     private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
     {
-        try { Process.Start("http://prismcalc.codeplex.com/license"); }
+        try { Process.Start("https://www.netradio.info/medical/#prismcalc"); }
         catch (Exception ex) { MessageBox.Show(ex.Message, "Error"); }
     }
 

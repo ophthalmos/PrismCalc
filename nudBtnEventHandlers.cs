@@ -17,54 +17,44 @@ using System.Windows.Forms;
 
 namespace PrismCalc
 {
-  public class NumericUpDnWithUpDnBtnEventHandlers : NumericUpDown
-  {
-    public event EventHandler UpButtonClicked = null;
-    public event EventHandler DownButtonClicked = null;
-    private bool bCallBase = true;
-
-    public void OnUpButtonClicked(EventArgs e)
+    public class NumericUpDnWithUpDnBtnEventHandlers : NumericUpDown
     {
-      EventHandler eventCopy = UpButtonClicked;
-      if (eventCopy != null) eventCopy(this, e);
-    }
+        public event EventHandler UpButtonClicked = null;
+        public event EventHandler DownButtonClicked = null;
+        private bool bCallBase = true;
 
-    public void OnDownButtonClicked(EventArgs e)
-    {
-      EventHandler eventCopy = DownButtonClicked;
-      if (eventCopy != null) eventCopy(this, e);
-    }
+        public void OnUpButtonClicked(EventArgs e) => UpButtonClicked?.Invoke(this, e);
 
-    public NumericUpDnWithUpDnBtnEventHandlers()
-    {
-    }
+        public void OnDownButtonClicked(EventArgs e) => DownButtonClicked?.Invoke(this, e);
 
-    public override void DownButton()
-    {
-      try
-      {
-        if (bCallBase)
-          base.DownButton();
-        OnDownButtonClicked(new EventArgs());
-      }
-      catch (Exception ex) { Console.WriteLine(ex.Message); }
-    }
+        public NumericUpDnWithUpDnBtnEventHandlers()
+        {
+        }
 
-    public override void UpButton()
-    {
-      try
-      {
-        if (bCallBase)
-          base.UpButton();
-        OnUpButtonClicked(new EventArgs());
-      }
-      catch (Exception ex) { Console.WriteLine(ex.Message); }
-    }
+        public override void DownButton()
+        {
+            try
+            {
+                if (bCallBase) { base.DownButton(); }
+                OnDownButtonClicked(new EventArgs());
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+        }
 
-    public bool CallBase
-    {
-      get { return bCallBase; }
-      set { bCallBase = value; }
+        public override void UpButton()
+        {
+            try
+            {
+                if (bCallBase) { base.UpButton(); }
+                OnUpButtonClicked(new EventArgs());
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+        }
+
+        public bool CallBase
+        {
+            get => bCallBase;
+            set => bCallBase = value;
+        }
     }
-  }
 }

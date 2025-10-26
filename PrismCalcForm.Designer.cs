@@ -40,12 +40,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.grbxRsltEyeL = new System.Windows.Forms.GroupBox();
+            this.nudResultPowerLE = new PrismCalc.NumericUpDnWithUpDnBtnEventHandlers();
             this.tbResultBaseLE = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.grbxVerticalPrism = new System.Windows.Forms.GroupBox();
+            this.nudPowerVertical = new PrismCalc.NumericUpDnWithUpDnBtnEventHandlers();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rbPrsmVerticalDn = new System.Windows.Forms.RadioButton();
             this.rbPrsmVerticalUp = new System.Windows.Forms.RadioButton();
@@ -56,6 +58,7 @@
             this.rbPrsmVerticalLE = new System.Windows.Forms.RadioButton();
             this.rbPrsmVerticalRE = new System.Windows.Forms.RadioButton();
             this.grbxRsltEyeR = new System.Windows.Forms.GroupBox();
+            this.nudResultPowerRE = new PrismCalc.NumericUpDnWithUpDnBtnEventHandlers();
             this.tbResultBaseRE = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,6 +71,7 @@
             this.lblPrsmHorizontPdpt = new System.Windows.Forms.Label();
             this.lblPrsmHorizontBase = new System.Windows.Forms.Label();
             this.lblPrsmHorizontPower = new System.Windows.Forms.Label();
+            this.nudPowerHorizont = new PrismCalc.NumericUpDnWithUpDnBtnEventHandlers();
             this.lblPrsmHorizontEye = new System.Windows.Forms.Label();
             this.rbPrsmHorizontLE = new System.Windows.Forms.RadioButton();
             this.rbPrsmHorizontRE = new System.Windows.Forms.RadioButton();
@@ -76,6 +80,8 @@
             this.label22 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblConvSphere = new System.Windows.Forms.Label();
+            this.nudConvSphere = new PrismCalc.NumericUpDnWithUpDnBtnEventHandlers();
+            this.nudConversion = new PrismCalc.NumericUpDnWithUpDnBtnEventHandlers();
             this.btnConversion = new System.Windows.Forms.Button();
             this.tbConversion = new System.Windows.Forms.TextBox();
             this.lblConvertTo = new System.Windows.Forms.Label();
@@ -99,39 +105,33 @@
             this.grbxOblique = new System.Windows.Forms.GroupBox();
             this.lblObliqueGrd = new System.Windows.Forms.Label();
             this.lblObliqueCmM = new System.Windows.Forms.Label();
+            this.nudOblBas = new PrismCalc.NumericUpDnWithUpDnBtnEventHandlers();
             this.label13 = new System.Windows.Forms.Label();
             this.lblObliquePwr = new System.Windows.Forms.Label();
+            this.nudOblPwr = new PrismCalc.NumericUpDnWithUpDnBtnEventHandlers();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.helpProvider = new System.Windows.Forms.HelpProvider();
-            this.nudResultPowerLE = new PrismCalc.NumericUpDnWithUpDnBtnEventHandlers();
-            this.nudPowerVertical = new PrismCalc.NumericUpDnWithUpDnBtnEventHandlers();
-            this.nudResultPowerRE = new PrismCalc.NumericUpDnWithUpDnBtnEventHandlers();
-            this.nudPowerHorizont = new PrismCalc.NumericUpDnWithUpDnBtnEventHandlers();
-            this.nudConvSphere = new PrismCalc.NumericUpDnWithUpDnBtnEventHandlers();
-            this.nudConversion = new PrismCalc.NumericUpDnWithUpDnBtnEventHandlers();
-            this.nudOblBas = new PrismCalc.NumericUpDnWithUpDnBtnEventHandlers();
-            this.nudOblPwr = new PrismCalc.NumericUpDnWithUpDnBtnEventHandlers();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grbxRsltEyeL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudResultPowerLE)).BeginInit();
             this.grbxVerticalPrism.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPowerVertical)).BeginInit();
             this.panel2.SuspendLayout();
             this.grbxRsltEyeR.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudResultPowerRE)).BeginInit();
             this.grbxHorizontPrism.SuspendLayout();
             this.pnlHorizontal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPowerHorizont)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudConvSphere)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudConversion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.grbxOblique.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudResultPowerLE)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPowerVertical)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudResultPowerRE)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPowerHorizont)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudConvSphere)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudConversion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudOblBas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudOblPwr)).BeginInit();
             this.SuspendLayout();
@@ -261,6 +261,30 @@
             this.grbxRsltEyeL.TabStop = false;
             this.grbxRsltEyeL.Text = "Result left eye";
             // 
+            // nudResultPowerLE
+            // 
+            this.nudResultPowerLE.BackColor = System.Drawing.Color.Lavender;
+            this.nudResultPowerLE.CallBase = true;
+            this.nudResultPowerLE.DecimalPlaces = 2;
+            this.nudResultPowerLE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudResultPowerLE.Location = new System.Drawing.Point(71, 23);
+            this.nudResultPowerLE.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudResultPowerLE.Name = "nudResultPowerLE";
+            this.nudResultPowerLE.Size = new System.Drawing.Size(60, 23);
+            this.nudResultPowerLE.TabIndex = 0;
+            this.nudResultPowerLE.TabStop = false;
+            this.nudResultPowerLE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.nudResultPowerLE, "Pfeil auf/ab-Taste: ± 1,0\r\nzus. Umschalt (Shift): ± 3,0\r\nzus. Strg (Control): ± 1" +
+        "0,0\r\nTab/Return: nächstes Feld");
+            this.nudResultPowerLE.UpButtonClicked += new System.EventHandler(this.NudResultPowerLE_UpButtonClicked);
+            this.nudResultPowerLE.DownButtonClicked += new System.EventHandler(this.NudResultPowerLE_DownButtonClicked);
+            this.nudResultPowerLE.Enter += new System.EventHandler(this.NudResultPowerLE_Enter);
+            this.nudResultPowerLE.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NudResultPowerLE_KeyUp);
+            // 
             // tbResultBaseLE
             // 
             this.tbResultBaseLE.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -329,6 +353,30 @@
             this.grbxVerticalPrism.TabIndex = 0;
             this.grbxVerticalPrism.TabStop = false;
             this.grbxVerticalPrism.Text = "Vertical prism";
+            // 
+            // nudPowerVertical
+            // 
+            this.nudPowerVertical.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.nudPowerVertical.CallBase = true;
+            this.nudPowerVertical.DecimalPlaces = 2;
+            this.nudPowerVertical.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudPowerVertical.Location = new System.Drawing.Point(71, 63);
+            this.nudPowerVertical.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudPowerVertical.Name = "nudPowerVertical";
+            this.nudPowerVertical.Size = new System.Drawing.Size(60, 23);
+            this.nudPowerVertical.TabIndex = 8;
+            this.nudPowerVertical.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.nudPowerVertical, "Pfeil auf/ab-Taste: ± 1,0\r\nzus. Umschalt (Shift): ± 3,0\r\nzus. Strg (Control): ± 1" +
+        "0,0\r\nTab/Return: nächstes Feld");
+            this.nudPowerVertical.UpButtonClicked += new System.EventHandler(this.NudPowerVertical_UpButtonClicked);
+            this.nudPowerVertical.DownButtonClicked += new System.EventHandler(this.NudPowerVertical_DownButtonClicked);
+            this.nudPowerVertical.Enter += new System.EventHandler(this.NudPowerVertical_Enter);
+            this.nudPowerVertical.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NudPowerVertical_KeyDown);
+            this.nudPowerVertical.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NudPowerVertical_KeyUp);
             // 
             // panel2
             // 
@@ -451,6 +499,33 @@
             this.grbxRsltEyeR.TabIndex = 0;
             this.grbxRsltEyeR.TabStop = false;
             this.grbxRsltEyeR.Text = "Result right eye";
+            // 
+            // nudResultPowerRE
+            // 
+            this.nudResultPowerRE.BackColor = System.Drawing.Color.MistyRose;
+            this.nudResultPowerRE.CallBase = true;
+            this.nudResultPowerRE.DecimalPlaces = 2;
+            this.nudResultPowerRE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpProvider.SetHelpString(this.nudResultPowerRE, "Sie können die Werte dieses Feldes verändern. Hierdurch ändert sich automatisch d" +
+        "ie Prismenstärke am anderen Auge.");
+            this.nudResultPowerRE.Location = new System.Drawing.Point(71, 23);
+            this.nudResultPowerRE.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudResultPowerRE.Name = "nudResultPowerRE";
+            this.helpProvider.SetShowHelp(this.nudResultPowerRE, true);
+            this.nudResultPowerRE.Size = new System.Drawing.Size(60, 23);
+            this.nudResultPowerRE.TabIndex = 0;
+            this.nudResultPowerRE.TabStop = false;
+            this.nudResultPowerRE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.nudResultPowerRE, "Pfeil auf/ab-Taste: ± 1,0\r\nzus. Umschalt (Shift): ± 3,0\r\nzus. Strg (Control): ± 1" +
+        "0,0\r\nTab/Return: nächstes Feld");
+            this.nudResultPowerRE.UpButtonClicked += new System.EventHandler(this.NudResultPowerRE_UpButtonClicked);
+            this.nudResultPowerRE.DownButtonClicked += new System.EventHandler(this.NudResultPowerRE_DownButtonClicked);
+            this.nudResultPowerRE.Enter += new System.EventHandler(this.NudResultPowerRE_Enter);
+            this.nudResultPowerRE.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NudResultPowerRE_KeyUp);
             // 
             // tbResultBaseRE
             // 
@@ -593,6 +668,30 @@
             this.lblPrsmHorizontPower.TabIndex = 0;
             this.lblPrsmHorizontPower.Text = "Power:";
             // 
+            // nudPowerHorizont
+            // 
+            this.nudPowerHorizont.BackColor = System.Drawing.Color.Honeydew;
+            this.nudPowerHorizont.CallBase = true;
+            this.nudPowerHorizont.DecimalPlaces = 2;
+            this.nudPowerHorizont.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudPowerHorizont.Location = new System.Drawing.Point(71, 63);
+            this.nudPowerHorizont.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudPowerHorizont.Name = "nudPowerHorizont";
+            this.nudPowerHorizont.Size = new System.Drawing.Size(60, 23);
+            this.nudPowerHorizont.TabIndex = 3;
+            this.nudPowerHorizont.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.nudPowerHorizont, "Pfeil auf/ab-Taste: ± 1,0\r\nzus. Umschalt (Shift): ± 3,0\r\nzus. Strg (Control): ± 1" +
+        "0,0\r\nTab/Return: nächstes Feld");
+            this.nudPowerHorizont.UpButtonClicked += new System.EventHandler(this.NudPowerHorizont_UpButtonClicked);
+            this.nudPowerHorizont.DownButtonClicked += new System.EventHandler(this.NudPowerHorizont_DownButtonClicked);
+            this.nudPowerHorizont.Enter += new System.EventHandler(this.NudPowerHorizont_Enter);
+            this.nudPowerHorizont.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NudPowerHorizont_KeyDown);
+            this.nudPowerHorizont.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NudPowerHorizont_KeyUp);
+            // 
             // lblPrsmHorizontEye
             // 
             this.lblPrsmHorizontEye.AutoSize = true;
@@ -700,6 +799,48 @@
             this.lblConvSphere.Text = "Refraction (sph):";
             this.lblConvSphere.Visible = false;
             // 
+            // nudConvSphere
+            // 
+            this.nudConvSphere.BackColor = System.Drawing.Color.Ivory;
+            this.nudConvSphere.CallBase = true;
+            this.nudConvSphere.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.nudConvSphere.Location = new System.Drawing.Point(132, 54);
+            this.nudConvSphere.Name = "nudConvSphere";
+            this.nudConvSphere.Size = new System.Drawing.Size(60, 23);
+            this.nudConvSphere.TabIndex = 3;
+            this.nudConvSphere.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.nudConvSphere, "Pfeil auf/ab-Taste: ± 1,0\r\nzus. Umschalt (Shift): ± 3,0\r\nzus. Strg (Control): ± 1" +
+        "0,0\r\nTab/Return: nächstes Feld");
+            this.nudConvSphere.Visible = false;
+            this.nudConvSphere.UpButtonClicked += new System.EventHandler(this.NudConvSphere_UpButtonClicked);
+            this.nudConvSphere.DownButtonClicked += new System.EventHandler(this.NudConvSphere_DownButtonClicked);
+            this.nudConvSphere.Enter += new System.EventHandler(this.NudConvSphere_Enter);
+            this.nudConvSphere.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NudConvSphere_KeyUp);
+            // 
+            // nudConversion
+            // 
+            this.nudConversion.BackColor = System.Drawing.Color.Ivory;
+            this.nudConversion.CallBase = true;
+            this.nudConversion.DecimalPlaces = 2;
+            this.nudConversion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.nudConversion.Location = new System.Drawing.Point(9, 108);
+            this.nudConversion.Maximum = new decimal(new int[] {
+            89,
+            0,
+            0,
+            0});
+            this.nudConversion.Name = "nudConversion";
+            this.nudConversion.Size = new System.Drawing.Size(60, 23);
+            this.nudConversion.TabIndex = 4;
+            this.nudConversion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.nudConversion, "Pfeil auf/ab-Taste: ± 1,0\r\nzus. Umschalt (Shift): ± 3,0\r\nzus. Strg (Control): ± 1" +
+        "0,0\r\nTab/Return: nächstes Feld");
+            this.nudConversion.UpButtonClicked += new System.EventHandler(this.NudConversion_UpButtonClicked);
+            this.nudConversion.DownButtonClicked += new System.EventHandler(this.NudConversion_DownButtonClicked);
+            this.nudConversion.Enter += new System.EventHandler(this.NudConversion_Enter);
+            this.nudConversion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NudConversion_KeyDown);
+            this.nudConversion.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NudConversion_KeyUp);
+            // 
             // btnConversion
             // 
             this.btnConversion.Image = ((System.Drawing.Image)(resources.GetObject("btnConversion.Image")));
@@ -752,7 +893,7 @@
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(25, 12);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(164, 32);
+            this.label20.Size = new System.Drawing.Size(163, 32);
             this.label20.TabIndex = 0;
             this.label20.Text = "prism diopter to\r\ndegree and vice versa";
             this.label20.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -960,167 +1101,6 @@
             this.lblObliqueCmM.TabIndex = 0;
             this.lblObliqueCmM.Text = "cm/m";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(10, 65);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(49, 17);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Base:";
-            // 
-            // lblObliquePwr
-            // 
-            this.lblObliquePwr.AutoSize = true;
-            this.lblObliquePwr.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObliquePwr.Location = new System.Drawing.Point(10, 25);
-            this.lblObliquePwr.Name = "lblObliquePwr";
-            this.lblObliquePwr.Size = new System.Drawing.Size(57, 17);
-            this.lblObliquePwr.TabIndex = 0;
-            this.lblObliquePwr.Text = "Power:";
-            // 
-            // nudResultPowerLE
-            // 
-            this.nudResultPowerLE.BackColor = System.Drawing.Color.Lavender;
-            this.nudResultPowerLE.CallBase = true;
-            this.nudResultPowerLE.DecimalPlaces = 2;
-            this.nudResultPowerLE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudResultPowerLE.Location = new System.Drawing.Point(71, 23);
-            this.nudResultPowerLE.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.nudResultPowerLE.Name = "nudResultPowerLE";
-            this.nudResultPowerLE.Size = new System.Drawing.Size(60, 23);
-            this.nudResultPowerLE.TabIndex = 0;
-            this.nudResultPowerLE.TabStop = false;
-            this.nudResultPowerLE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.toolTip.SetToolTip(this.nudResultPowerLE, "Pfeil auf/ab-Taste: ± 1,0\r\nzus. Umschalt (Shift): ± 3,0\r\nzus. Strg (Control): ± 1" +
-        "0,0\r\nTab/Return: nächstes Feld");
-            this.nudResultPowerLE.UpButtonClicked += new System.EventHandler(this.NudResultPowerLE_UpButtonClicked);
-            this.nudResultPowerLE.DownButtonClicked += new System.EventHandler(this.NudResultPowerLE_DownButtonClicked);
-            this.nudResultPowerLE.Enter += new System.EventHandler(this.NudResultPowerLE_Enter);
-            this.nudResultPowerLE.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NudResultPowerLE_KeyUp);
-            // 
-            // nudPowerVertical
-            // 
-            this.nudPowerVertical.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.nudPowerVertical.CallBase = true;
-            this.nudPowerVertical.DecimalPlaces = 2;
-            this.nudPowerVertical.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudPowerVertical.Location = new System.Drawing.Point(71, 63);
-            this.nudPowerVertical.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.nudPowerVertical.Name = "nudPowerVertical";
-            this.nudPowerVertical.Size = new System.Drawing.Size(60, 23);
-            this.nudPowerVertical.TabIndex = 8;
-            this.nudPowerVertical.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.toolTip.SetToolTip(this.nudPowerVertical, "Pfeil auf/ab-Taste: ± 1,0\r\nzus. Umschalt (Shift): ± 3,0\r\nzus. Strg (Control): ± 1" +
-        "0,0\r\nTab/Return: nächstes Feld");
-            this.nudPowerVertical.UpButtonClicked += new System.EventHandler(this.NudPowerVertical_UpButtonClicked);
-            this.nudPowerVertical.DownButtonClicked += new System.EventHandler(this.NudPowerVertical_DownButtonClicked);
-            this.nudPowerVertical.Enter += new System.EventHandler(this.NudPowerVertical_Enter);
-            this.nudPowerVertical.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NudPowerVertical_KeyDown);
-            this.nudPowerVertical.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NudPowerVertical_KeyUp);
-            // 
-            // nudResultPowerRE
-            // 
-            this.nudResultPowerRE.BackColor = System.Drawing.Color.MistyRose;
-            this.nudResultPowerRE.CallBase = true;
-            this.nudResultPowerRE.DecimalPlaces = 2;
-            this.nudResultPowerRE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.helpProvider.SetHelpString(this.nudResultPowerRE, "Sie können die Werte dieses Feldes verändern. Hierdurch ändert sich automatisch d" +
-        "ie Prismenstärke am anderen Auge.");
-            this.nudResultPowerRE.Location = new System.Drawing.Point(71, 23);
-            this.nudResultPowerRE.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.nudResultPowerRE.Name = "nudResultPowerRE";
-            this.helpProvider.SetShowHelp(this.nudResultPowerRE, true);
-            this.nudResultPowerRE.Size = new System.Drawing.Size(60, 23);
-            this.nudResultPowerRE.TabIndex = 0;
-            this.nudResultPowerRE.TabStop = false;
-            this.nudResultPowerRE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.toolTip.SetToolTip(this.nudResultPowerRE, "Pfeil auf/ab-Taste: ± 1,0\r\nzus. Umschalt (Shift): ± 3,0\r\nzus. Strg (Control): ± 1" +
-        "0,0\r\nTab/Return: nächstes Feld");
-            this.nudResultPowerRE.UpButtonClicked += new System.EventHandler(this.NudResultPowerRE_UpButtonClicked);
-            this.nudResultPowerRE.DownButtonClicked += new System.EventHandler(this.NudResultPowerRE_DownButtonClicked);
-            this.nudResultPowerRE.Enter += new System.EventHandler(this.NudResultPowerRE_Enter);
-            this.nudResultPowerRE.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NudResultPowerRE_KeyUp);
-            // 
-            // nudPowerHorizont
-            // 
-            this.nudPowerHorizont.BackColor = System.Drawing.Color.Honeydew;
-            this.nudPowerHorizont.CallBase = true;
-            this.nudPowerHorizont.DecimalPlaces = 2;
-            this.nudPowerHorizont.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudPowerHorizont.Location = new System.Drawing.Point(71, 63);
-            this.nudPowerHorizont.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.nudPowerHorizont.Name = "nudPowerHorizont";
-            this.nudPowerHorizont.Size = new System.Drawing.Size(60, 23);
-            this.nudPowerHorizont.TabIndex = 3;
-            this.nudPowerHorizont.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.toolTip.SetToolTip(this.nudPowerHorizont, "Pfeil auf/ab-Taste: ± 1,0\r\nzus. Umschalt (Shift): ± 3,0\r\nzus. Strg (Control): ± 1" +
-        "0,0\r\nTab/Return: nächstes Feld");
-            this.nudPowerHorizont.UpButtonClicked += new System.EventHandler(this.NudPowerHorizont_UpButtonClicked);
-            this.nudPowerHorizont.DownButtonClicked += new System.EventHandler(this.NudPowerHorizont_DownButtonClicked);
-            this.nudPowerHorizont.Enter += new System.EventHandler(this.NudPowerHorizont_Enter);
-            this.nudPowerHorizont.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NudPowerHorizont_KeyDown);
-            this.nudPowerHorizont.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NudPowerHorizont_KeyUp);
-            // 
-            // nudConvSphere
-            // 
-            this.nudConvSphere.BackColor = System.Drawing.Color.Ivory;
-            this.nudConvSphere.CallBase = true;
-            this.nudConvSphere.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.nudConvSphere.Location = new System.Drawing.Point(132, 54);
-            this.nudConvSphere.Name = "nudConvSphere";
-            this.nudConvSphere.Size = new System.Drawing.Size(60, 23);
-            this.nudConvSphere.TabIndex = 3;
-            this.nudConvSphere.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.toolTip.SetToolTip(this.nudConvSphere, "Pfeil auf/ab-Taste: ± 1,0\r\nzus. Umschalt (Shift): ± 3,0\r\nzus. Strg (Control): ± 1" +
-        "0,0\r\nTab/Return: nächstes Feld");
-            this.nudConvSphere.Visible = false;
-            this.nudConvSphere.UpButtonClicked += new System.EventHandler(this.NudConvSphere_UpButtonClicked);
-            this.nudConvSphere.DownButtonClicked += new System.EventHandler(this.NudConvSphere_DownButtonClicked);
-            this.nudConvSphere.Enter += new System.EventHandler(this.NudConvSphere_Enter);
-            this.nudConvSphere.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NudConvSphere_KeyUp);
-            // 
-            // nudConversion
-            // 
-            this.nudConversion.BackColor = System.Drawing.Color.Ivory;
-            this.nudConversion.CallBase = true;
-            this.nudConversion.DecimalPlaces = 2;
-            this.nudConversion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.nudConversion.Location = new System.Drawing.Point(9, 108);
-            this.nudConversion.Maximum = new decimal(new int[] {
-            89,
-            0,
-            0,
-            0});
-            this.nudConversion.Name = "nudConversion";
-            this.nudConversion.Size = new System.Drawing.Size(60, 23);
-            this.nudConversion.TabIndex = 4;
-            this.nudConversion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.toolTip.SetToolTip(this.nudConversion, "Pfeil auf/ab-Taste: ± 1,0\r\nzus. Umschalt (Shift): ± 3,0\r\nzus. Strg (Control): ± 1" +
-        "0,0\r\nTab/Return: nächstes Feld");
-            this.nudConversion.UpButtonClicked += new System.EventHandler(this.NudConversion_UpButtonClicked);
-            this.nudConversion.DownButtonClicked += new System.EventHandler(this.NudConversion_DownButtonClicked);
-            this.nudConversion.Enter += new System.EventHandler(this.NudConversion_Enter);
-            this.nudConversion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NudConversion_KeyDown);
-            this.nudConversion.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NudConversion_KeyUp);
-            // 
             // nudOblBas
             // 
             this.nudOblBas.BackColor = System.Drawing.Color.Ivory;
@@ -1143,6 +1123,26 @@
             this.nudOblBas.Enter += new System.EventHandler(this.NudOblBas_Enter);
             this.nudOblBas.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NudOblBas_KeyDown);
             this.nudOblBas.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NudOblBas_KeyUp);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(10, 65);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(49, 17);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Base:";
+            // 
+            // lblObliquePwr
+            // 
+            this.lblObliquePwr.AutoSize = true;
+            this.lblObliquePwr.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObliquePwr.Location = new System.Drawing.Point(10, 25);
+            this.lblObliquePwr.Name = "lblObliquePwr";
+            this.lblObliquePwr.Size = new System.Drawing.Size(57, 17);
+            this.lblObliquePwr.TabIndex = 0;
+            this.lblObliquePwr.Text = "Power:";
             // 
             // nudOblPwr
             // 
@@ -1174,32 +1174,37 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 336);
             this.Controls.Add(this.tabControl1);
-            this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Prism Calculator";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.PrismCalcForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grbxRsltEyeL.ResumeLayout(false);
             this.grbxRsltEyeL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudResultPowerLE)).EndInit();
             this.grbxVerticalPrism.ResumeLayout(false);
             this.grbxVerticalPrism.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPowerVertical)).EndInit();
             this.panel2.ResumeLayout(false);
             this.grbxRsltEyeR.ResumeLayout(false);
             this.grbxRsltEyeR.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudResultPowerRE)).EndInit();
             this.grbxHorizontPrism.ResumeLayout(false);
             this.grbxHorizontPrism.PerformLayout();
             this.pnlHorizontal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudPowerHorizont)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudConvSphere)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudConversion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -1207,12 +1212,6 @@
             this.groupBox1.PerformLayout();
             this.grbxOblique.ResumeLayout(false);
             this.grbxOblique.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudResultPowerLE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPowerVertical)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudResultPowerRE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPowerHorizont)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudConvSphere)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudConversion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudOblBas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudOblPwr)).EndInit();
             this.ResumeLayout(false);
